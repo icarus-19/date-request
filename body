@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <ctype.h>
+
+// Function to convert string to lowercase
+void toLowerCase(char *str) {
+    for(int i = 0; str[i]; i++){
+        str[i] = tolower(str[i]);
+    }
+}
+
+int main() {
+    
+    char userName[50];  
+    char userGender[20];
+    float userHeight;  
+    int userAge;
+    char name[] = "Eutychus muoki";
+    char gender2[] = "male";
+    int age = 18;
+    float height = 1.67;
+    
+    
+    printf("\nTHIS IS ONLY FOR THE LADIES SO GENTS PLEASE GO AWAY ");
+    sleep(2);
+    
+    
+    
+    printf("\nput in your age: ");
+    scanf("%d", &userAge);
+    
+     if (userAge < 18) {
+        printf("\nform one unado nini hapa");
+        sleep(1);
+    printf("\nmiaka in 35 ");
+    sleep(2);
+    printf("\nRUDI HIGHSCHOOL ");
+    sleep(2);
+        return 0;
+    }
+     sleep(1);
+    printf("\nput in your gender: ");
+    scanf("%19s", userGender);  // gender
+        char userGenderLower[20];
+    char myGenderLower[20];
+    
+    strcpy(userGenderLower, userGender);
+    strcpy(myGenderLower, gender2);
+    
+    toLowerCase(userGenderLower);
+    toLowerCase(myGenderLower);
+    
+    if (strcmp(userGenderLower, myGenderLower) == 0) {
+        printf("\nSorry %s, we're both %s. I'm looking for the opposite gender!\n", userName, userGender);
+        return 0;
+    }
+    
+    
+
+    
+    printf("Hi I'm %s, I'm a %s, my age is %d height %.2fm\n", name, gender2, age, height);
+    
+    printf("Here's the thing i noticed your single, i'm single so lets skip the whole thing and let's just be valentines just for friday\n");
+    sleep(2);
+   
+    printf("\nDon't get it twisted, I hate Valentine's. I'm just here for the chocolates!\n");
+    sleep(1);
+    
+    printf("\nput in your name: ");
+    scanf("%49s", userName);  // Added buffer limit
+    
+   
+    
+    sleep(1);
+    printf("\nput in your height (in meters): ");
+    scanf("%f", &userHeight);
+    
+    
+    
+    // Check age first
+   
+    
+    // Check for same gender
+
+    
+    // If all checks pass
+    printf("\nGreat! We're compatible, %s!\n", userName);
+    printf("You're %.2fm tall and %d years old. Let's get those chocolates!\n", userHeight, userAge);
+    
+    return 0;
+}
